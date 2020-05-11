@@ -27,10 +27,26 @@ getNaughtyNames( [
 // => returns [ 'xDranik' ]
 */
 
-function getNiceNames(people){
-  //TODO
+const getNiceNames = (people) => {
+  let nicePeople = [];
+  for(key in people) {
+    for(let i = 0; i < people[key].length; i++) {
+      if(people[key][i].wasNice === true) {
+        nicePeople.push(people[key][i].name);
+      }
+    }
+  }
+  return nicePeople;
 }
 
-function getNaughtyNames(people){
-  //TODO
+const getNaughtyNames = (people) => {
+  let naughtyPeople = [];
+  for(key in people) {
+    for(let i = 0; i < people[key].length; i++) {
+      if(people[key][i].wasNice === false) {
+        naughtyPeople.push(people[key][i].name);
+      }
+    }
+  }
+  return naughtyPeople;
 }
