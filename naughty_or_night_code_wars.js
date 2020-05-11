@@ -1,8 +1,11 @@
 /*
-It's almost Christmas! That means Santa's making his list, and checking it twice. Unfortunately, elves accidentally mixed the Naughty and Nice list together! Santa needs your help to save Christmas!
+It's almost Christmas! That means Santa's making his list, and checking it twice. Unfortunately, elves accidentally mixed the 
+Naughty and Nice list together! Santa needs your help to save Christmas!
 
 Save Christmas!
-Santa needs you to write two functions. Both of the functions accept a sequence of objects. The first one returns a sequence containing only the names of the nice people, and the other returns a sequence containing only the names of the naughty people. Return an empty sequence [] if the result from either of the functions contains no names.
+Santa needs you to write two functions. Both of the functions accept a sequence of objects. The first one returns a sequence 
+containing only the names of the nice people, and the other returns a sequence containing only the names of the naughty people. 
+Return an empty sequence [] if the result from either of the functions contains no names.
 
 The objects in the passed will represent people. Each object contains two properties: name and wasNice.
 name - The name of the person
@@ -29,11 +32,9 @@ getNaughtyNames( [
 
 const getNiceNames = (people) => {
   let nicePeople = [];
-  for(key in people) {
-    for(let i = 0; i < people[key].length; i++) {
-      if(people[key][i].wasNice === true) {
-        nicePeople.push(people[key][i].name);
-      }
+  for(let i = 0; i < people.length; i++) {
+    if(people[i].wasNice === true) {
+      nicePeople.push(people[i].name);
     }
   }
   return nicePeople;
@@ -41,11 +42,9 @@ const getNiceNames = (people) => {
 
 const getNaughtyNames = (people) => {
   let naughtyPeople = [];
-  for(key in people) {
-    for(let i = 0; i < people[key].length; i++) {
-      if(people[key][i].wasNice === false) {
-        naughtyPeople.push(people[key][i].name);
-      }
+  for(let i = 0; i < people.length; i++) {
+    if(people[i].wasNice === false) {
+      naughtyPeople.push(people[i].name);
     }
   }
   return naughtyPeople;
